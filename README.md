@@ -2,6 +2,8 @@
 
 Premium personal portfolio for Ishan Jain, Associate Software Engineer.
 
+**Live:** [ishanjain1408.vercel.app](https://ishanjain1408.vercel.app)
+
 ## Stack
 
 - React + TypeScript (Vite)
@@ -25,3 +27,7 @@ npm run preview
 ## Customize
 
 Edit content in `src/data/content.ts` — experience, projects, skills, and profile links.
+
+## Deploy
+
+Pushed to [github.com/ishanjainkl-sys/ishanjain1408](https://github.com/ishanjainkl-sys/ishanjain1408) and connected to Vercel. Push to `main` to redeploy.

@@ -23,6 +23,7 @@ export const profile = {
   links: {
     linkedin: 'https://www.linkedin.com/in/ishanjain1408',
     github: 'https://github.com/ishanjain1408',
+    website: 'https://ishanjain1408.vercel.app',
     archive: 'https://sites.google.com/view/ishanjain1408',
   },
 }

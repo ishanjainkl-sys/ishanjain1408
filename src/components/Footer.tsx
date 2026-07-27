@@ -27,6 +27,14 @@ export function Footer() {
             LinkedIn
           </a>
           <a
+            href={profile.links.website}
+            target="_blank"
+            rel="noreferrer"
+            className="transition-colors hover:text-sage"
+          >
+            Live site
+          </a>
+          <a
             href={profile.links.archive}
             target="_blank"
             rel="noreferrer"
