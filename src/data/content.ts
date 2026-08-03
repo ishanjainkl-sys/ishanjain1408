@@ -13,13 +13,13 @@ export type Project = {
 
 export const profile = {
   name: 'Ishan Jain',
-  title: 'Associate Software Engineer',
+  title: 'Trainee Software Engineer',
   location: 'Udaipur, Rajasthan',
   email: 'ishanjain1408@gmail.com',
   phone: '+91 7728919575',
-  headline: 'Building reliable product experiences across web and desktop.',
+  headline: 'Building reliable product experiences across web, desktop, and AI.',
   summary:
-    'I ship polished React and Electron features, tighten performance, and connect clean APIs — from camera workflows to AI-assisted tools.',
+    'I ship polished React and Electron features, production RAG systems, and clean APIs — from camera workflows to grounded document assistants.',
   links: {
     linkedin: 'https://www.linkedin.com/in/ishanjain1408',
     github: 'https://github.com/ishanjain1408',
@@ -30,6 +30,23 @@ export const profile = {
 
 /** Flagship case studies — strongest recent work */
 export const projects: Project[] = [
+  {
+    id: 'chatmaster',
+    title: 'ChatMaster (RAG Document Assistant)',
+    year: '2026',
+    role: 'Full-stack · RAG · Production',
+    stack: ['React', 'Vite', 'FastAPI', 'FAISS', 'Mistral AI'],
+    summary:
+      'A production RAG chatbot for PDF/TXT uploads with grounded Q&A, source citations, and a hardened ingestion pipeline.',
+    highlights: [
+      'Built document chunking, FAISS vector indexing, and Mistral AI–powered grounded answers with source citations',
+      'Deployed full-stack on Vercel (frontend) and Render (backend) with dual-API fallback and retry logic',
+      'Hardened text-extraction pipeline for reliable production uploads across PDF and TXT formats',
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ChatMaster' },
+    ],
+  },
   {
     id: 'insurance-ai',
     title: 'Insurance Policy AI',
@@ -54,31 +71,11 @@ export const projects: Project[] = [
     summary:
       'A full-stack booking platform with searchable listings, adaptive UI, and role-based reservations.',
     highlights: [
-      '16+ property listings with search filters and booking flows',
-      'Role-based access for hosts and guests',
-      'Clean architecture focused on maintainability and scale',
+      '16+ property listings with search filters and role-based booking functionality',
+      'Adaptive listings and user-friendly UI to enhance customer experience',
+      'Clean architecture for scalable and maintainable web app development',
     ],
-    links: [],
-  },
-  {
-    id: 'startupflora',
-    title: 'StartupFlora Auth System',
-    year: '2024',
-    role: 'Backend · Security',
-    stack: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    summary:
-      'A production-minded auth backend with HR approval, OTP resets, and full activity audit trails.',
-    highlights: [
-      'JWT login supporting 100+ users with session and device limits',
-      'Fine-grained roles, permissions, and domain validation on registration',
-      'OTP password resets plus Postman collection for API documentation',
-    ],
-    links: [
-      {
-        label: 'Related auth work',
-        href: 'https://github.com/ishanjain1408/Role-Based-Authentication-System',
-      },
-    ],
+    links: [{ label: 'GitHub', href: 'https://github.com/ishanjain1408' }],
   },
 ]
 
@@ -173,12 +170,12 @@ export const experience = [
   {
     company: 'Kadel Labs',
     location: 'Udaipur',
-    role: 'Associate Software Engineer',
-    period: 'Nov 2025 — Present',
+    role: 'Trainee Software Engineer',
+    period: 'Nov 2025 — Aug 2026',
     impact: [
-      'Built and enhanced React.js / Electron features for TimeMachine — file management, recording playback, patrol monitoring, and 360° viewers across web and desktop.',
-      'Resolved 25+ UI, performance, and functionality defects across PDF/image viewers, patrol workflows, streaming, and fullscreen experiences.',
-      'Designed reusable components, integrated REST APIs, wrote unit tests, and drove Git-based reviews for consistent cross-platform releases.',
+      'Developed and enhanced React.js / Electron features for TimeMachine — file management, recording playback, patrol monitoring, and 360° viewers across web and desktop.',
+      'Resolved 25+ UI, performance, and functionality defects across PDF/image viewers, patrol workflows, recording systems, camera streaming, and fullscreen experiences.',
+      'Built reusable components, integrated REST APIs, tested features, reviewed code, and collaborated with Git.',
     ],
   },
   {
@@ -187,9 +184,9 @@ export const experience = [
     role: 'Junior Software Engineer',
     period: 'Aug 2024 — Nov 2024',
     impact: [
-      'Engineered a TypeScript React/Redux to-do app that improved UI responsiveness by 35%.',
-      'Shipped a mobile-first Recipe Explorer in React Native with 30% faster load times via local storage.',
-      'Created 12+ reusable components to cut duplication and lift mobile/web performance.',
+      'Engineered a TypeScript React/Redux to-do app that improved UI responsiveness by 35% and code scalability.',
+      'Developed a mobile-first Recipe Explorer in React Native with 30% faster load times via local storage integration.',
+      'Created 12+ reusable components to reduce code duplication and enhance mobile/web performance.',
     ],
   },
   {
@@ -198,9 +195,9 @@ export const experience = [
     role: 'Trainee Engineer',
     period: 'Apr 2023 — Sep 2023',
     impact: [
-      'Built scalable backends for 2+ e-commerce and health apps; optimized MySQL for 40% faster access.',
-      'Shipped a Leaflet.js store locator that cut user search time by 30% across devices.',
-      'Improved indexed queries and visualization paths, boosting data fetch speed by 50%.',
+      'Engineered scalable backends for 2+ e-commerce and health apps; optimized MySQL queries for 40% faster access.',
+      'Released a Leaflet.js store locator that cut user search time by 30% across devices with team collaboration.',
+      'Enhanced database queries using indexed fields and data visualization, improving data fetch speed by 50%.',
     ],
   },
 ]
@@ -216,7 +213,7 @@ export const achievements = [
   {
     title: 'Kalpavriksha Program',
     period: 'Jul 2024',
-    detail: 'Applied DSA, OS, Flutter, and Python across 2 real-world engineering projects.',
+    detail: 'Applying DSA, OS, Flutter, and Python in 2 real-world engineering projects.',
   },
   {
     title: 'Technovation 2021 — 2nd Place',
@@ -231,17 +228,30 @@ export const achievements = [
 ]
 
 export const skills = {
-  Languages: ['JavaScript (ES6+)', 'TypeScript', 'C++', 'SQL', 'Python'],
+  Languages: ['JavaScript (ES6+)', 'TypeScript', 'C++', 'Python', 'SQL'],
   Frontend: [
     'React.js',
     'React Native',
-    'Electron',
-    'Angular',
+    'Next.js',
+    'Redux',
     'HTML5',
     'CSS3',
-    'Redux',
+    'Tailwind CSS',
+    'Material UI',
   ],
-  Backend: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'JWT', 'Socket.io'],
+  Backend: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs'],
   Database: ['MongoDB', 'MySQL', 'PostgreSQL'],
-  Tools: ['Git', 'GitHub', 'Postman', 'Vite', 'Leaflet.js', 'Render', 'FAISS'],
+  Tools: [
+    'Git',
+    'GitHub',
+    'Electron',
+    'Prisma',
+    'JWT',
+    'Postman',
+    'FAISS',
+    'Hugging Face',
+    'Mistral AI',
+    'Vercel',
+    'Render',
+  ],
 }

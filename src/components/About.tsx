@@ -30,17 +30,18 @@ export function About() {
           className="space-y-6 text-base leading-relaxed text-mist-dim md:text-lg"
         >
           <p>
-            I&apos;m {profile.name}, an Associate Software Engineer based in{' '}
+            I&apos;m {profile.name}, a Trainee Software Engineer based in{' '}
             {profile.location}. I care about shipping features that feel fast,
             stable, and intentional — whether that means Electron desktop
-            workflows, React interfaces, or backend services that stay out of
-            the way.
+            workflows, production RAG assistants, or backend services that stay
+            out of the way.
           </p>
           <p>
-            Day to day at Kadel Labs I work on TimeMachine: recording playback,
-            patrol monitoring, camera streaming, and 360° viewing across web and
-            desktop. Earlier roles sharpened my full-stack instincts — from
-            React Native performance to auth systems and MySQL tuning.
+            At Kadel Labs I work on TimeMachine: recording playback, patrol
+            monitoring, camera streaming, and 360° viewing across web and
+            desktop. I also build and deploy AI products like ChatMaster — RAG
+            chatbots with FAISS, Mistral AI, and full-stack hosting on Vercel and
+            Render.
           </p>
           <p>
             Before that, I published early experiments on{' '}
