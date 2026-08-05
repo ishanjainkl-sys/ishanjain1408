@@ -45,6 +45,7 @@ export const projects: Project[] = [
     ],
     links: [
       { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ChatMaster' },
+      { label: 'Link', href: 'http://chatmaster-snowy.vercel.app/' },
     ],
   },
   {
@@ -60,7 +61,10 @@ export const projects: Project[] = [
       'Ingestion pipeline: chunking, Hugging Face embeddings, FAISS vector index',
       'LLM agent routing with policy type and region filters for contextual answers',
     ],
-    links: [],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/ishanjain1408/insurance-policy-ai-frontend' },
+      { label: 'Link', href: 'https://insurance-policy-ai-frontend.vercel.app/' },
+    ],
   },
   {
     id: 'airbnb',
