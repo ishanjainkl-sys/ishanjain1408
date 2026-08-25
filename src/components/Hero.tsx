@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data/content'
+import heroImg from '../assets/profile.jpeg'
 
 const easeOut = [0.22, 1, 0.36, 1] as const
 
@@ -63,57 +64,78 @@ export function Hero() {
         />
       </div>
 
-      <div className="section-pad relative z-10 mx-auto w-full max-w-[1200px]">
-        <motion.p
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          className="mb-5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
-        >
-          {profile.title} · {profile.location}
-        </motion.p>
+      <div className="section-pad relative z-10 mx-auto flex w-full max-w-[1200px] flex-col-reverse gap-10 md:flex-row md:items-end md:justify-between md:gap-8">
+        <div>
+          <motion.p
+            custom={0}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="mb-5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
+          >
+            {profile.title} · {profile.location}
+          </motion.p>
 
-        <motion.h1
-          custom={1}
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          className="font-display text-[clamp(3.2rem,11vw,7.5rem)] leading-[0.92] font-800 tracking-[-0.03em] text-mist"
-          style={{ fontWeight: 800 }}
-        >
-          {profile.name}
-        </motion.h1>
+          <motion.h1
+            custom={1}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="font-display text-[clamp(3.2rem,11vw,7.5rem)] leading-[0.92] font-800 tracking-[-0.03em] text-mist"
+            style={{ fontWeight: 800 }}
+          >
+            {profile.name}
+          </motion.h1>
 
-        <motion.p
+          <motion.p
+            custom={2}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="mt-6 max-w-xl text-lg text-mist-dim text-balance md:text-xl"
+          >
+            {profile.headline}
+          </motion.p>
+
+          <motion.div
+            custom={3}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="#work"
+              className="inline-flex items-center justify-center bg-sage px-6 py-3 text-sm font-semibold text-ink transition-[transform,background] duration-300 hover:bg-mist hover:-translate-y-0.5"
+            >
+              View selected work
+            </a>
+            <a
+              href="#experience"
+              className="inline-flex items-center justify-center border border-line px-6 py-3 text-sm font-medium text-mist transition-[border-color,color,transform] duration-300 hover:border-sage/50 hover:text-sage hover:-translate-y-0.5"
+            >
+              Career timeline
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div
           custom={2}
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="mt-6 max-w-xl text-lg text-mist-dim text-balance md:text-xl"
+          className="relative md:mr-8 lg:mr-16 shrink-0"
         >
-          {profile.headline}
-        </motion.p>
-
-        <motion.div
-          custom={3}
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          className="mt-10 flex flex-wrap items-center gap-4"
-        >
-          <a
-            href="#work"
-            className="inline-flex items-center justify-center bg-sage px-6 py-3 text-sm font-semibold text-ink transition-[transform,background] duration-300 hover:bg-mist hover:-translate-y-0.5"
-          >
-            View selected work
-          </a>
-          <a
-            href="#experience"
-            className="inline-flex items-center justify-center border border-line px-6 py-3 text-sm font-medium text-mist transition-[border-color,color,transform] duration-300 hover:border-sage/50 hover:text-sage hover:-translate-y-0.5"
-          >
-            Career timeline
-          </a>
+          <div className="relative h-32 w-32 md:h-56 md:w-56 lg:h-64 lg:w-64 overflow-hidden rounded-[2rem] border border-sage/20 bg-ink/50 shadow-[0_0_40px_rgba(126,184,168,0.15)] ring-1 ring-white/5 md:rounded-[3rem]">
+            <img
+              src={heroImg}
+              alt="Ishan Jain profile photo"
+              className="h-full w-full object-cover object-center"
+              loading="eager"
+              decoding="async"
+            />
+            <div className="absolute inset-0 rounded-[2rem] md:rounded-[3rem] ring-1 ring-inset ring-white/10 pointer-events-none"></div>
+          </div>
         </motion.div>
       </div>
     </section>
