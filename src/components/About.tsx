@@ -30,46 +30,28 @@ export function About() {
           className="space-y-6 text-base leading-relaxed text-mist-dim md:text-lg"
         >
           <p>
-            I&apos;m {profile.name}, a Trainee Software Engineer based in{' '}
-            {profile.location}. I care about shipping features that feel fast,
-            stable, and intentional — whether that means Electron desktop
-            workflows, production RAG assistants, or backend services that stay
-            out of the way.
-          </p>
-          <p>
-            At Kadel Labs I work on TimeMachine: recording playback, patrol
-            monitoring, camera streaming, and 360° viewing across web and
-            desktop. I also build and deploy AI products like ChatMaster — RAG
-            chatbots with FAISS, Mistral AI, and full-stack hosting on Vercel and
-            Render.
-          </p>
-          <p>
-            Before that, I published early experiments on{' '}
-            <a
-              href={profile.links.archive}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sage underline-offset-4 hover:underline"
-            >
-              my Google Sites portfolio
-            </a>
-            — Angular chat, map locators, and marketing pages — the foundation
-            that led into production React, Electron, and AI systems.
+            {profile.summary}
           </p>
           <div className="border-t border-line pt-6">
             <p className="text-sm tracking-[0.12em] text-mist-faint uppercase">
               Education
             </p>
-            <p
-              className="mt-3 font-display text-xl text-mist"
-              style={{ fontWeight: 600 }}
-            >
-              {education.degree}
-            </p>
-            <p className="mt-1 text-mist-dim">
-              {education.school} · {education.period} · {education.detail}
-            </p>
-            <p className="mt-4 text-sm text-mist-faint">
+            <div className="mt-4 space-y-5">
+              {education.map((edu, idx) => (
+                <div key={idx}>
+                  <p
+                    className="font-display text-xl text-mist"
+                    style={{ fontWeight: 600 }}
+                  >
+                    {edu.degree}
+                  </p>
+                  <p className="mt-1 text-mist-dim text-sm">
+                    {edu.school} · {edu.period} · {edu.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-mist-faint">
               Languages: English & Hindi
             </p>
           </div>

@@ -19,7 +19,7 @@ export const profile = {
   phone: '+91 7728919575',
   headline: 'Building reliable product experiences across web, desktop, and AI.',
   summary:
-    'I ship polished React and Electron features, production RAG systems, and clean APIs — from camera workflows to grounded document assistants.',
+    'Full Stack Developer with 2+ years of experience building scalable web and desktop applications using React.js, Node.js, TypeScript, and MongoDB. Proven expertise in REST APIs, performance optimization, production debugging, and AI-powered applications, delivering reliable, high-performance solutions across diverse platforms.',
   links: {
     linkedin: 'https://www.linkedin.com/in/ishanjain1408',
     github: 'https://github.com/ishanjain1408',
@@ -31,6 +31,22 @@ export const profile = {
 /** Flagship case studies — strongest recent work */
 export const projects: Project[] = [
   {
+    id: 'productstudio',
+    title: 'ProductStudio (AI Website Builder)',
+    year: '2026',
+    role: 'Full Stack · Custom Builder',
+    stack: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+    summary:
+      'A visual website builder with responsive editing, drag-and-drop, and AI-assisted generation.',
+    highlights: [
+      'Built a visual website builder with reusable components, responsive Desktop/Tablet/Mobile editing, drag-and-drop, Figma-like zoom/pan, and live previews.',
+      'Implemented AI-assisted website generation/editing, project/template management, theme support, and scalable component/property-based editor architecture.',
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ProductStudio' },
+    ],
+  },
+  {
     id: 'chatmaster',
     title: 'ChatMaster (RAG Document Assistant)',
     year: '2026',
@@ -39,9 +55,8 @@ export const projects: Project[] = [
     summary:
       'A production RAG chatbot for PDF/TXT uploads with grounded Q&A, source citations, and a hardened ingestion pipeline.',
     highlights: [
-      'Built document chunking, FAISS vector indexing, and Mistral AI–powered grounded answers with source citations',
-      'Deployed full-stack on Vercel (frontend) and Render (backend) with dual-API fallback and retry logic',
-      'Hardened text-extraction pipeline for reliable production uploads across PDF and TXT formats',
+      'Built a production RAG chatbot with document uploads, FAISS indexing, Mistral AI Q&A, and source citations.',
+      'Deployed full-stack app on Vercel/Render with API fallback, retry logic, and reliable text extraction.',
     ],
     links: [
       { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ChatMaster' },
@@ -73,11 +88,10 @@ export const projects: Project[] = [
     role: 'Full-stack · MERN',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     summary:
-      'A full-stack booking platform with searchable listings, adaptive UI, and role-based reservations.',
+      'A full-stack clone with 16+ property listings, search filters, and role-based booking functionality.',
     highlights: [
-      '16+ property listings with search filters and role-based booking functionality',
-      'Adaptive listings and user-friendly UI to enhance customer experience',
-      'Clean architecture for scalable and maintainable web app development',
+      'Created a full-stack clone with 16+ property listings, search filters, and role-based booking functionality.',
+      'Implemented adaptive listings, search functionality, user-friendly UI to enhance customer experience & functionality.',
     ],
     links: [{ label: 'GitHub', href: 'https://github.com/ishanjain1408' }],
   },
@@ -177,9 +191,19 @@ export const experience = [
     role: 'Trainee Software Engineer',
     period: 'Nov 2025 — Aug 2026',
     impact: [
-      'Developed and enhanced React.js / Electron features for TimeMachine — file management, recording playback, patrol monitoring, and 360° viewers across web and desktop.',
-      'Resolved 25+ UI, performance, and functionality defects across PDF/image viewers, patrol workflows, recording systems, camera streaming, and fullscreen experiences.',
+      'Developed React.js and Electron features for file management, playback, monitoring, and 360° viewing.',
+      'Resolved 25+ UI, performance, and functionality defects across viewers, workflows, recordings, and streaming.',
       'Built reusable components, integrated REST APIs, tested features, reviewed code, and collaborated with Git.',
+    ],
+  },
+  {
+    company: 'Acolyte Technologies',
+    location: 'Jaipur',
+    role: 'MERN Intern',
+    period: 'Apr 2025 — Aug 2025',
+    impact: [
+      'Developed MERN Sales Lead Dashboard tracking 200+ leads, 100+ daily logins, and 40+ non-logins.',
+      'Optimized backend, built middleware, reducing crashes 27% and improving performance 25%.'
     ],
   },
   {
@@ -188,9 +212,9 @@ export const experience = [
     role: 'Junior Software Engineer',
     period: 'Aug 2024 — Nov 2024',
     impact: [
-      'Engineered a TypeScript React/Redux to-do app that improved UI responsiveness by 35% and code scalability.',
-      'Developed a mobile-first Recipe Explorer in React Native with 30% faster load times via local storage integration.',
-      'Created 12+ reusable components to reduce code duplication and enhance mobile/web performance.',
+      'Engineered a TypeScript-based to-do app using React/Redux; boosted UI responsiveness by 35% and code scalability.',
+      'Developed mobile-first Recipe Explorer in React Native; improved load time by 30% with local storage integration.',
+      'Created 12+ reusable components to reduce code duplication and enhance mobile/web performance innovation.',
     ],
   },
   {
@@ -200,25 +224,28 @@ export const experience = [
     period: 'Apr 2023 — Sep 2023',
     impact: [
       'Engineered scalable backends for 2+ e-commerce and health apps; optimized MySQL queries for 40% faster access.',
-      'Released a Leaflet.js store locator that cut user search time by 30% across devices with team collaboration.',
+      'Released store locator using Leaflet.js, cutting user search time by 30% across devices with team collaboration.',
       'Enhanced database queries using indexed fields and data visualization, improving data fetch speed by 50%.',
     ],
   },
 ]
 
-export const education = {
-  school: 'Poornima College of Engineering',
-  degree: 'B.Tech, Computer Science & Engineering',
-  period: 'Aug 2019 — Jul 2023',
-  detail: '7.38 CGPA',
-}
+export const education = [
+  {
+    school: 'Poornima College of Engineering',
+    degree: 'B.Tech, Computer Science & Engineering',
+    period: 'Aug 2019 — Jul 2023',
+    detail: '7.38 CGPA',
+  },
+  {
+    school: 'Kalpavriksha Program',
+    degree: 'DSA, OS, Flutter, and Python',
+    period: 'Mar 2023 — Jul 2024',
+    detail: '2 real-world engineering projects, A+ Grade',
+  },
+]
 
 export const achievements = [
-  {
-    title: 'Kalpavriksha Program',
-    period: 'Jul 2024',
-    detail: 'Applying DSA, OS, Flutter, and Python in 2 real-world engineering projects.',
-  },
   {
     title: 'Technovation 2021 — 2nd Place',
     period: 'Jan 2022',
