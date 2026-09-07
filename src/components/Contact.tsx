@@ -49,12 +49,6 @@ export function Contact() {
               >
                 {profile.email}
               </a>
-              <a
-                href={`tel:${profile.phone.replace(/\s/g, '')}`}
-                className="inline-flex items-center justify-center border border-line px-6 py-3 text-sm font-medium text-mist transition-[border-color,color,transform] duration-300 hover:-translate-y-0.5 hover:border-sage/50 hover:text-sage"
-              >
-                {profile.phone}
-              </a>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
