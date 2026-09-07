@@ -24,16 +24,23 @@
 
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
   }
 
   body {
     margin: 0;
     min-height: 100vh;
+    overflow-x: hidden;
     font-family: var(--font-body);
     background: var(--color-ink);
     color: var(--color-mist);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   ::selection {
