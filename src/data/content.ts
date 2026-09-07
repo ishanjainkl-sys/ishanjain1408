@@ -10,11 +10,12 @@ export type Project = {
   highlights: string[]
   links: ProjectLink[]
   image?: string
+  images?: string[]
 }
 
 export const profile = {
   name: 'Ishan Jain',
-  title: 'Trainee Software Engineer',
+  title: 'Software Engineer',
   location: 'Udaipur, Rajasthan',
   email: 'ishanjain1408@gmail.com',
   phone: '+91 7728919575',
@@ -47,6 +48,11 @@ export const projects: Project[] = [
       { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ProductStudio' },
     ],
     image: '/projects/productstudio1.png',
+    images: [
+      '/projects/productstudio1.png',
+      '/projects/productstudio2.png',
+      '/projects/productstudio3.png',
+    ],
   },
   {
     id: 'walkintown',

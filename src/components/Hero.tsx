@@ -66,15 +66,16 @@ export function Hero() {
 
       <div className="section-pad relative z-10 mx-auto flex w-full max-w-[1200px] flex-col-reverse gap-10 md:flex-row md:items-end md:justify-between md:gap-8">
         <div>
-          <motion.p
+          <motion.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mb-5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
+            className="mb-5 flex flex-col gap-1.5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
           >
-            {profile.title} · {profile.location}
-          </motion.p>
+            <span>FULL STACK DEVELOPER</span>
+            <span className="text-mist-dim text-[0.85em]">JAIPUR · UDAIPUR · DUNGARPUR · OPEN TO RELOCATION</span>
+          </motion.div>
 
           <motion.h1
             custom={1}

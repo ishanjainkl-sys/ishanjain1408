@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { earlierWork, projects } from '../data/content'
+import { Carousel } from './Carousel'
 
 export function Work() {
   return (
@@ -89,8 +90,12 @@ export function Work() {
                 )}
               </div>
 
-              {/* Image Side - Only render if project.image exists */}
-              {project.image && (
+              {/* Image Side - Only render if project.image or project.images exists */}
+              {(project.images?.length ?? 0) > 1 ? (
+                <div className={`relative w-full ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                  <Carousel images={project.images!} title={project.title} />
+                </div>
+              ) : project.image ? (
                 <div
                   className={`relative w-full aspect-video rounded-2xl overflow-hidden border border-line bg-[#161618] transition-transform duration-500 ease-out group-hover:scale-[1.02] ${index % 2 === 1 ? 'md:order-1' : ''
                     }`}
@@ -103,7 +108,7 @@ export function Work() {
                   />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
                 </div>
-              )}
+              ) : null}
             </motion.li>
           ))}
         </ul>
