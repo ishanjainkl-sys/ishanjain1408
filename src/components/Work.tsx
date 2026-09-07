@@ -23,22 +23,23 @@ export function Work() {
           </h2>
         </motion.div>
 
-        <ul className="divide-y divide-line border-y border-line">
+        <ul className="flex flex-col gap-16 md:gap-24 py-10 border-t border-line">
           {projects.map((project, index) => (
             <motion.li
               key={project.id}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={{ once: true, margin: '-100px' }}
               transition={{
-                duration: 0.55,
-                delay: index * 0.08,
+                duration: 0.6,
+                delay: index * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group grid gap-6 py-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:gap-12 md:py-14"
+              className={`group grid gap-8 md:gap-16 items-center ${project.image ? 'md:grid-cols-2' : 'md:grid-cols-1'}`}
             >
-              <div>
-                <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm text-mist-faint">
+              {/* Text Side */}
+              <div className={`flex flex-col ${index % 2 === 1 && project.image ? 'md:order-2' : ''}`}>
+                <div className="mb-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm text-mist-faint">
                   <span>{String(index + 1).padStart(2, '0')}</span>
                   <span aria-hidden>·</span>
                   <span>{project.year}</span>
@@ -51,42 +52,58 @@ export function Work() {
                 >
                   {project.title}
                 </h3>
-                <p className="mt-4 text-base leading-relaxed text-mist-dim md:text-lg">
+                <p className="mt-4 mb-6 text-base leading-relaxed text-mist-dim md:text-lg">
                   {project.summary}
                 </p>
+
+                <ul className="space-y-3 mb-6">
+                  {project.highlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 text-sm leading-relaxed text-mist-dim md:text-base relative pl-4"
+                    >
+                      <span className="absolute left-0 top-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sage" aria-hidden />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="text-sm font-medium text-mist-faint tracking-wide uppercase mb-8">
+                  {project.stack.join(' · ')}
+                </p>
+
                 {project.links.length > 0 && (
-                  <div className="mt-5 flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-4 mt-auto">
                     {project.links.map((link) => (
                       <a
                         key={link.href + link.label}
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-sm font-medium text-sage underline-offset-4 transition-colors hover:text-mist hover:underline"
+                        className="inline-flex h-10 items-center justify-center rounded-full bg-mist/5 px-6 text-sm font-medium text-mist transition-colors hover:bg-sage/20 hover:text-sage border border-line"
                       >
-                        {link.label} ↗
+                        {link.label}
                       </a>
                     ))}
                   </div>
                 )}
               </div>
 
-              <div className="flex flex-col justify-between gap-8">
-                <ul className="space-y-3">
-                  {project.highlights.map((item) => (
-                    <li
-                      key={item}
-                      className="flex gap-3 text-sm leading-relaxed text-mist-dim md:text-base"
-                    >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-sage" aria-hidden />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm text-mist-faint">
-                  {project.stack.join(' · ')}
-                </p>
-              </div>
+              {/* Image Side - Only render if project.image exists */}
+              {project.image && (
+                <div
+                  className={`relative w-full aspect-video rounded-2xl overflow-hidden border border-line bg-[#161618] transition-transform duration-500 ease-out group-hover:scale-[1.02] ${index % 2 === 1 ? 'md:order-1' : ''
+                    }`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover object-top transition-opacity duration-300 opacity-90 group-hover:opacity-100"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+                </div>
+              )}
             </motion.li>
           ))}
         </ul>

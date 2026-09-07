@@ -9,6 +9,7 @@ export type Project = {
   summary: string
   highlights: string[]
   links: ProjectLink[]
+  image?: string
 }
 
 export const profile = {
@@ -35,7 +36,7 @@ export const projects: Project[] = [
     title: 'ProductStudio (AI Website Builder)',
     year: '2026',
     role: 'Full Stack · Custom Builder',
-    stack: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+    stack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Turborepo'],
     summary:
       'A visual website builder with responsive editing, drag-and-drop, and AI-assisted generation.',
     highlights: [
@@ -45,6 +46,7 @@ export const projects: Project[] = [
     links: [
       { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ProductStudio' },
     ],
+    image: '/projects/productstudio1.png',
   },
   {
     id: 'walkintown',
@@ -62,6 +64,7 @@ export const projects: Project[] = [
       { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/WalkInTown' },
       { label: 'Link', href: 'https://walkintown-ajt8irtl8-kl24.vercel.app/' },
     ],
+    image: '/projects/walkintown.png.png',
   },
   {
     id: 'chatmaster',
@@ -79,6 +82,7 @@ export const projects: Project[] = [
       { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ChatMaster' },
       { label: 'Link', href: 'http://chatmaster-snowy.vercel.app/' },
     ],
+    image: '/projects/chatmaster.png.png',
   },
   {
     id: 'insurance-ai',
@@ -97,6 +101,7 @@ export const projects: Project[] = [
       { label: 'GitHub', href: 'https://github.com/ishanjain1408/insurance-policy-ai-frontend' },
       { label: 'Link', href: 'https://insurance-policy-ai-frontend.vercel.app/' },
     ],
+    image: '/projects/insurance-policy-ai.png',
   },
   {
     id: 'airbnb',
