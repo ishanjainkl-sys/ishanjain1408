@@ -47,6 +47,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'walkintown',
+    title: 'WalkInTown (O2O Marketplace Platform)',
+    year: '2026',
+    role: 'Full-stack · O2O Marketplace',
+    stack: ['Next.js', 'React', 'Tailwind CSS'],
+    summary:
+      'An O2O vendor marketplace with configurable store profiles, image galleries, and advanced search filters.',
+    highlights: [
+      'Integrated an O2O vendor marketplace with configurable store profiles, image galleries, and advanced search filters.',
+      'Engineered multi-tenant dashboards utilizing advanced form validation for seamless inventory management.',
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/WalkInTown' },
+      { label: 'Link', href: 'https://walkintown-ajt8irtl8-kl24.vercel.app/' },
+    ],
+  },
+  {
     id: 'chatmaster',
     title: 'ChatMaster (RAG Document Assistant)',
     year: '2026',
