@@ -74,7 +74,7 @@ export function Hero() {
             className="mb-5 flex flex-col gap-1.5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
           >
             <span>FULL STACK DEVELOPER</span>
-            <span className="text-mist-dim text-[0.85em]">JAIPUR · UDAIPUR · DUNGARPUR · OPEN TO RELOCATION</span>
+            <span className="text-mist-dim text-[0.85em]">JAIPUR · UDAIPUR · OPEN TO RELOCATION</span>
           </motion.div>
 
           <motion.h1
