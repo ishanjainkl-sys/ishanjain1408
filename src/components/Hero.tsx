@@ -127,15 +127,15 @@ export function Hero() {
           animate="show"
           className="relative md:mr-8 lg:mr-16 shrink-0"
         >
-          <div className="relative h-32 w-32 md:h-56 md:w-56 lg:h-64 lg:w-64 overflow-hidden rounded-[2rem] border border-sage/20 bg-ink/50 shadow-[0_0_40px_rgba(126,184,168,0.15)] ring-1 ring-white/5 md:rounded-[3rem]">
+          <div className="relative h-40 w-32 md:h-64 md:w-48 lg:h-72 lg:w-56 overflow-hidden rounded-[2rem] border border-sage/20 bg-ink/50 shadow-[0_0_40px_rgba(126,184,168,0.15)] ring-1 ring-white/5 md:rounded-[2.5rem]">
             <img
               src={heroImg}
               alt="Ishan Jain profile photo"
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-top"
               loading="eager"
               decoding="async"
             />
-            <div className="absolute inset-0 rounded-[2rem] md:rounded-[3rem] ring-1 ring-inset ring-white/10 pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-inset ring-white/10 pointer-events-none"></div>
           </div>
         </motion.div>
       </div>
