@@ -45,7 +45,7 @@ export const projects: Project[] = [
       'Implemented AI-assisted website generation/editing, project/template management, theme support, and scalable component/property-based editor architecture.',
     ],
     links: [
-      { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ProductStudio' },
+      { label: 'GitHub', href: 'https://github.com/ishanjainkl-sys/ProductStudio-' },
     ],
     image: '/projects/productstudio1.png',
     images: [
