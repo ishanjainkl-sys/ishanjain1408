@@ -71,24 +71,19 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!validate()) return
+    if (isSubmitting || !validate()) return
 
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
     try {
-      // Using FormSubmit.co for zero-config email forwarding to profile.email
-      // The first time a submission is made, it will require email confirmation.
-      const response = await fetch(`https://formsubmit.co/ajax/${profile.email}`, {
+      const response = await fetch(`/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
-        body: JSON.stringify({
-          _subject: `New submission from ${formData.name}`,
-          ...formData,
-        }),
+        body: JSON.stringify(formData),
       })
 
       if (response.ok) {
@@ -182,7 +177,7 @@ export function Contact() {
                   </div>
                   <h3 className="text-xl font-semibold text-mist">Message Sent!</h3>
                   <p className="text-mist-dim">
-                    Thank you for reaching out. I&apos;ll get back to you as soon as possible.
+                    Message is sent successfully to Ishan
                   </p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
@@ -195,7 +190,7 @@ export function Contact() {
                 <form onSubmit={handleSubmit} className="flex flex-col space-y-5">
                   {submitStatus === 'error' && (
                     <div className="rounded border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-400">
-                      There was an error sending your message. Please try again.
+                      Unable to send your message. Please try again later.
                     </div>
                   )}
 
