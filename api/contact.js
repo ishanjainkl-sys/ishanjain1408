@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   });
 
   try {
-    const mailToIshan = transporter.sendMail({
+    await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
       to: 'ishanjain1408@gmail.com',
       replyTo: email,
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nSubject: ${subject}\n\nMessage:\n${message}`,
     });
 
-    const mailToSender = transporter.sendMail({
+    await transporter.sendMail({
       from: `"Ishan Jain" <${process.env.SMTP_USER}>`,
       to: email,
       subject: "Thank You for Contacting Me",
@@ -45,8 +45,6 @@ export default async function handler(req, res) {
         </div>
       `,
     });
-
-    await Promise.all([mailToIshan, mailToSender]);
 
     return res.status(200).json({ message: 'Emails sent successfully' });
   } catch (error) {
