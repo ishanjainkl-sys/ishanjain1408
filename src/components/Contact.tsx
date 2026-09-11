@@ -77,7 +77,7 @@ export function Contact() {
     setSubmitStatus('idle')
 
     try {
-      const response = await fetch(`/api/contact`, {
+      const response = await fetch(`https://formsubmit.co/ajax/submissions@formsubmit.co`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
