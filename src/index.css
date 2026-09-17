@@ -4,14 +4,21 @@
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
 
+  /* Premium Dark Theme (Green/Sage) */
   --color-ink: #0f1412;
   --color-ink-soft: #161c19;
   --color-ink-lift: #1c2420;
+  
+  /* High contrast text */
   --color-mist: #e8efe9;
   --color-mist-dim: #a8b5ad;
   --color-mist-faint: #6d7a73;
+  
+  /* Original Sage accents */
   --color-sage: #7eb8a8;
   --color-sage-deep: #4f8f7f;
+  
+  /* Very subtle borders */
   --color-line: rgba(232, 239, 233, 0.12);
 }
 

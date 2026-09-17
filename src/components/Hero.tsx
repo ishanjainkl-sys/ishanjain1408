@@ -107,15 +107,18 @@ export function Hero() {
           >
             <a
               href="#work"
-              className="inline-flex items-center justify-center bg-sage px-6 py-3 text-sm font-semibold text-ink transition-[transform,background] duration-300 hover:bg-mist hover:-translate-y-0.5"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-mist px-8 py-3.5 text-sm font-semibold text-ink shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all hover:scale-105 active:scale-95"
             >
-              View selected work
+              <span className="relative z-10">View Projects</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-15"></div>
             </a>
             <a
-              href="#experience"
-              className="inline-flex items-center justify-center border border-line px-6 py-3 text-sm font-medium text-mist transition-[border-color,color,transform] duration-300 hover:border-sage/50 hover:text-sage hover:-translate-y-0.5"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-medium text-mist backdrop-blur-sm transition-all hover:border-sage/50 hover:bg-white/10 hover:text-sage hover:shadow-[0_0_20px_rgba(126,184,168,0.15)] active:scale-95"
             >
-              Career timeline
+              Download Resume
             </a>
           </motion.div>
         </div>

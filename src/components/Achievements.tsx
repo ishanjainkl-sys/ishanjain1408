@@ -23,7 +23,7 @@ export function Achievements() {
           </h2>
         </motion.div>
 
-        <ul className="divide-y divide-line border-y border-line">
+        <ul className="grid gap-6 md:grid-cols-2">
           {achievements.map((item, index) => (
             <motion.li
               key={item.title}
@@ -35,17 +35,19 @@ export function Achievements() {
                 delay: index * 0.07,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="grid gap-2 py-8 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10 md:py-10"
+              className="group relative flex flex-col justify-between rounded-3xl border border-white/5 bg-white/[0.01] p-8 transition-all hover:bg-white/[0.03] hover:shadow-[0_0_30px_rgba(126,184,168,0.05)] md:p-10"
             >
-              <p className="text-sm text-mist-faint">{item.period}</p>
               <div>
+                <div className="mb-6 inline-flex items-center rounded-full border border-sage/20 bg-sage/10 px-4 py-1.5 text-sm font-medium text-sage">
+                  {item.period}
+                </div>
                 <h3
-                  className="font-display text-xl font-600 text-mist md:text-2xl"
+                  className="font-display text-xl tracking-[-0.01em] text-mist md:text-2xl"
                   style={{ fontWeight: 600 }}
                 >
                   {item.title}
                 </h3>
-                <p className="mt-2 text-base text-mist-dim">{item.detail}</p>
+                <p className="mt-4 text-base leading-relaxed text-mist-dim">{item.detail}</p>
               </div>
             </motion.li>
           ))}

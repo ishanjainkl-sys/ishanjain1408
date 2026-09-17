@@ -25,7 +25,7 @@ export function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-10 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {entries.map(([category, items], index) => (
             <motion.div
               key={category}
@@ -37,13 +37,19 @@ export function Skills() {
                 delay: index * 0.06,
                 ease: [0.22, 1, 0.36, 1],
               }}
+              className="group rounded-3xl border border-white/5 bg-white/[0.02] p-6 transition-all hover:bg-white/[0.04] hover:shadow-[0_0_30px_rgba(126,184,168,0.05)]"
             >
-              <h3 className="mb-4 text-sm tracking-[0.14em] text-sage uppercase">
+              <h3 className="mb-6 flex items-center gap-3 text-sm font-semibold tracking-[0.14em] text-sage uppercase">
+                <div className="h-px flex-1 bg-gradient-to-r from-sage/30 to-transparent"></div>
                 {category}
+                <div className="h-px flex-1 bg-gradient-to-l from-sage/30 to-transparent"></div>
               </h3>
-              <ul className="space-y-2">
+              <ul className="flex flex-wrap justify-center gap-2">
                 {items.map((skill) => (
-                  <li key={skill} className="text-base text-mist-dim">
+                  <li
+                    key={skill}
+                    className="cursor-default rounded-full border border-white/5 bg-white/5 px-4 py-2 text-sm font-medium text-mist-dim transition-all hover:-translate-y-0.5 hover:border-sage/30 hover:bg-sage/10 hover:text-mist hover:shadow-[0_0_15px_rgba(126,184,168,0.2)]"
+                  >
                     {skill}
                   </li>
                 ))}

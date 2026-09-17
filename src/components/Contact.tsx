@@ -108,7 +108,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden border border-line bg-ink-soft px-6 py-16 md:px-14 md:py-20"
+          className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#161c19]/80 px-6 py-16 shadow-[0_0_40px_rgba(126,184,168,0.05)] backdrop-blur-xl md:px-14 md:py-20"
         >
           <div
             aria-hidden
@@ -143,12 +143,12 @@ export function Contact() {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-line bg-ink/50 text-mist-dim transition-all duration-300 hover:-translate-y-1 hover:border-sage hover:bg-sage/10 hover:text-sage"
+                    className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/5 text-mist-dim transition-all duration-300 hover:-translate-y-1 hover:border-sage/50 hover:bg-sage/10 hover:text-sage hover:shadow-[0_0_20px_rgba(126,184,168,0.15)]"
                     aria-label={item.label}
                   >
                     {item.icon}
                     {/* Tooltip */}
-                    <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 scale-95 whitespace-nowrap rounded bg-ink-lift border border-line px-2.5 py-1 text-xs text-mist opacity-0 transition-all duration-200 group-hover:-top-12 group-hover:scale-100 group-hover:opacity-100">
+                    <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 scale-95 whitespace-nowrap rounded-lg border border-white/10 bg-ink-lift px-3 py-1.5 text-xs text-mist shadow-xl opacity-0 transition-all duration-200 group-hover:-top-12 group-hover:scale-100 group-hover:opacity-100">
                       {item.label}
                     </span>
                   </a>
@@ -196,7 +196,7 @@ export function Contact() {
 
                   <div className="flex flex-col gap-5 sm:flex-row">
                     <div className="flex-1 space-y-1.5">
-                      <label htmlFor="name" className="text-sm font-medium text-mist-dim">
+                      <label htmlFor="name" className="text-sm font-medium text-mist-dim ml-1">
                         Full Name <span className="text-sage">*</span>
                       </label>
                       <input
@@ -206,15 +206,15 @@ export function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-none border bg-ink/50 px-4 py-3 text-sm text-mist outline-none transition-colors focus:border-sage focus:bg-ink ${errors.name ? 'border-red-500/50' : 'border-line'
+                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.name ? 'border-red-500/50' : 'border-white/10'
                           }`}
                         placeholder="John Doe"
                       />
-                      {errors.name && <p className="text-xs text-red-400">{errors.name}</p>}
+                      {errors.name && <p className="text-xs text-red-400 ml-1">{errors.name}</p>}
                     </div>
 
                     <div className="flex-1 space-y-1.5">
-                      <label htmlFor="email" className="text-sm font-medium text-mist-dim">
+                      <label htmlFor="email" className="text-sm font-medium text-mist-dim ml-1">
                         Email Address <span className="text-sage">*</span>
                       </label>
                       <input
@@ -224,17 +224,17 @@ export function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-none border bg-ink/50 px-4 py-3 text-sm text-mist outline-none transition-colors focus:border-sage focus:bg-ink ${errors.email ? 'border-red-500/50' : 'border-line'
+                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.email ? 'border-red-500/50' : 'border-white/10'
                           }`}
                         placeholder="john@example.com"
                       />
-                      {errors.email && <p className="text-xs text-red-400">{errors.email}</p>}
+                      {errors.email && <p className="text-xs text-red-400 ml-1">{errors.email}</p>}
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-5 sm:flex-row">
                     <div className="flex-1 space-y-1.5">
-                      <label htmlFor="phone" className="text-sm font-medium text-mist-dim">
+                      <label htmlFor="phone" className="text-sm font-medium text-mist-dim ml-1">
                         Phone Number
                       </label>
                       <input
@@ -244,15 +244,15 @@ export function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-none border bg-ink/50 px-4 py-3 text-sm text-mist outline-none transition-colors focus:border-sage focus:bg-ink ${errors.phone ? 'border-red-500/50' : 'border-line'
+                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.phone ? 'border-red-500/50' : 'border-white/10'
                           }`}
                         placeholder="+91-XXXXXXXXXX"
                       />
-                      {errors.phone && <p className="text-xs text-red-400">{errors.phone}</p>}
+                      {errors.phone && <p className="text-xs text-red-400 ml-1">{errors.phone}</p>}
                     </div>
 
                     <div className="flex-1 space-y-1.5">
-                      <label htmlFor="subject" className="text-sm font-medium text-mist-dim">
+                      <label htmlFor="subject" className="text-sm font-medium text-mist-dim ml-1">
                         Subject <span className="text-sage">*</span>
                       </label>
                       <input
@@ -262,16 +262,16 @@ export function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-none border bg-ink/50 px-4 py-3 text-sm text-mist outline-none transition-colors focus:border-sage focus:bg-ink ${errors.subject ? 'border-red-500/50' : 'border-line'
+                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.subject ? 'border-red-500/50' : 'border-white/10'
                           }`}
                         placeholder="How can I help you?"
                       />
-                      {errors.subject && <p className="text-xs text-red-400">{errors.subject}</p>}
+                      {errors.subject && <p className="text-xs text-red-400 ml-1">{errors.subject}</p>}
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
-                    <label htmlFor="message" className="text-sm font-medium text-mist-dim">
+                    <label htmlFor="message" className="text-sm font-medium text-mist-dim ml-1">
                       Message <span className="text-sage">*</span>
                     </label>
                     <textarea
@@ -281,19 +281,20 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       disabled={isSubmitting}
-                      className={`w-full resize-none rounded-none border bg-ink/50 px-4 py-3 text-sm text-mist outline-none transition-colors focus:border-sage focus:bg-ink ${errors.message ? 'border-red-500/50' : 'border-line'
+                      className={`w-full resize-none rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.message ? 'border-red-500/50' : 'border-white/10'
                         }`}
                       placeholder="Your message here..."
                     />
-                    {errors.message && <p className="text-xs text-red-400">{errors.message}</p>}
+                    {errors.message && <p className="text-xs text-red-400 ml-1">{errors.message}</p>}
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="mt-2 inline-flex items-center justify-center bg-sage px-6 py-3.5 text-sm font-semibold text-ink transition-[transform,background,opacity] duration-300 hover:bg-mist disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:bg-sage"
+                    className="group relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-mist px-8 py-3.5 text-sm font-semibold text-ink shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-15"></div>
                   </button>
                 </form>
               )}
