@@ -113,7 +113,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-15"></div>
             </a>
             <a
-              href="/resume.pdf"
+              href="/resume/Ishan Jain's Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-medium text-mist backdrop-blur-sm transition-all hover:border-sage/50 hover:bg-white/10 hover:text-sage hover:shadow-[0_0_20px_rgba(126,184,168,0.15)] active:scale-95"
