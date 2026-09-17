@@ -16,7 +16,7 @@ export type Project = {
 export const profile = {
   name: 'Ishan Jain',
   title: 'Software Engineer',
-  location: 'Udaipur, Rajasthan',
+  location: 'India',
   email: 'ishanjain1408@gmail.com',
   phone: '+91 7728919575',
   headline: 'Building reliable product experiences across web, desktop, and AI.',
