@@ -73,8 +73,18 @@ export function Hero() {
             animate="show"
             className="mb-5 flex flex-col gap-1.5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
           >
-            <span>FULL STACK DEVELOPER</span>
-            <span className="text-mist-dim text-[0.85em]">JAIPUR · UDAIPUR · OPEN TO RELOCATION</span>
+            <div className="flex flex-wrap items-center gap-2 md:gap-3">
+              <span>FULL STACK DEVELOPER</span>
+              <span className="hidden h-1 w-1 rounded-full bg-sage/50 md:block"></span>
+              <span>MERN STACK</span>
+              <span className="hidden h-1 w-1 rounded-full bg-sage/50 md:block"></span>
+              <span>AI</span>
+            </div>
+            <div className="mt-1 flex flex-wrap items-center gap-2 text-[0.85em] text-mist-dim md:gap-3">
+              <span className="rounded-full border border-sage/30 bg-sage/10 px-2.5 py-0.5 text-sage">IMMEDIATE JOINER</span>
+              <span className="hidden h-1 w-1 rounded-full bg-mist-dim/50 md:block"></span>
+              <span>{profile.location.toUpperCase()}</span>
+            </div>
           </motion.div>
 
           <motion.h1

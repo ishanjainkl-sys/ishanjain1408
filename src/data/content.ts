@@ -15,13 +15,13 @@ export type Project = {
 
 export const profile = {
   name: 'Ishan Jain',
-  title: 'Software Engineer',
-  location: 'India',
+  title: 'Full Stack Developer',
+  location: 'India · Open to Relocate',
   email: 'ishanjain1408@gmail.com',
   phone: '+91 7728919575',
-  headline: 'Building reliable product experiences across web, desktop, and AI.',
+  headline: 'Building scalable web, desktop, backend, and AI-powered applications.',
   summary:
-    'Full Stack Developer with 2+ years of experience building scalable web and desktop applications using React.js, Node.js, TypeScript, and MongoDB. Proven expertise in REST APIs, performance optimization, production debugging, and AI-powered applications, delivering reliable, high-performance solutions across diverse platforms.',
+    'Full Stack Developer with 2+ years of experience building scalable web, desktop, backend, and AI-powered applications. I specialize in React.js, Next.js, Node.js, Express.js, TypeScript, Python, FastAPI, MongoDB, PostgreSQL, MySQL, REST APIs, and AI/RAG applications.',
   links: {
     linkedin: 'https://www.linkedin.com/in/ishanjain1408',
     github: 'https://github.com/ishanjain1408',
@@ -214,14 +214,25 @@ export const earlierWork: Project[] = [
 
 export const experience = [
   {
+    company: 'Freelance',
+    location: 'Remote',
+    role: 'Full Stack Engineer',
+    period: 'Sep 2026 — Present',
+    impact: [
+      'Built a visual AI-powered website builder with responsive Desktop/Tablet/Mobile editing, drag-and-drop interactions, and Figma-like zoom/pan.',
+      'Developed scalable editor architecture using Next.js, React, Node.js, PostgreSQL, Prisma ORM, and Turborepo.',
+      'Improved the product experience through responsive canvas behavior, smooth interactions, and reusable UI components.'
+    ],
+  },
+  {
     company: 'Kadel Labs',
     location: 'Udaipur',
     role: 'Trainee Software Engineer',
     period: 'Nov 2025 — Aug 2026',
     impact: [
-      'Developed React.js and Electron features for file management, playback, monitoring, and 360° viewing.',
+      'Implemented React.js and Electron features for file management, playback, monitoring, and 360° viewing.',
       'Resolved 25+ UI, performance, and functionality defects across viewers, workflows, recordings, and streaming.',
-      'Built reusable components, integrated REST APIs, tested features, reviewed code, and collaborated with Git.',
+      'Created reusable components, integrated REST APIs, tested features, reviewed code, and collaborated with Git.',
     ],
   },
   {
@@ -230,8 +241,8 @@ export const experience = [
     role: 'MERN Intern',
     period: 'Apr 2025 — Aug 2025',
     impact: [
-      'Developed MERN Sales Lead Dashboard tracking 200+ leads, 100+ daily logins, and 40+ non-logins.',
-      'Optimized backend, built middleware, reducing crashes 27% and improving performance 25%.'
+      'Delivered MERN Sales Lead Dashboard tracking 200+ leads, 100+ daily logins, and 40+ non-logins.',
+      'Improved backend, Architected middleware, reducing crashes 27% and improving performance 25%.'
     ],
   },
   {
@@ -240,20 +251,20 @@ export const experience = [
     role: 'Junior Software Engineer',
     period: 'Aug 2024 — Nov 2024',
     impact: [
-      'Engineered a TypeScript-based to-do app using React/Redux; boosted UI responsiveness by 35% and code scalability.',
-      'Developed mobile-first Recipe Explorer in React Native; improved load time by 30% with local storage integration.',
+      'Designed a TypeScript-based to-do app using React/Redux; boosted UI responsiveness by 35% and code scalability.',
+      'Developed mobile-first Recipe Explorer in React Native; Optimized load time by 30% with local storage integration.',
       'Created 12+ reusable components to reduce code duplication and enhance mobile/web performance innovation.',
     ],
   },
   {
-    company: 'Codextra Protech Pvt Ltd',
+    company: 'Codextra Protech Private Limited',
     location: 'Jaipur',
-    role: 'Trainee Engineer',
+    role: 'Intern',
     period: 'Apr 2023 — Sep 2023',
     impact: [
+      'Designed MySQL DB for hospital management and E-commerce website & developed CRUD routes.',
+      'Developed E-commerce and hospital management applications app\'s database, created backend with models and routes.',
       'Engineered scalable backends for 2+ e-commerce and health apps; optimized MySQL queries for 40% faster access.',
-      'Released store locator using Leaflet.js, cutting user search time by 30% across devices with team collaboration.',
-      'Enhanced database queries using indexed fields and data visualization, improving data fetch speed by 50%.',
     ],
   },
 ]
