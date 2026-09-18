@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { profile } from '../data/content'
+import { useTheme } from '../hooks/useTheme'
 
 const links = [
   { href: '#work', label: 'Work' },
@@ -10,6 +12,7 @@ const links = [
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -50,13 +53,71 @@ export function Nav() {
           ))}
         </ul>
 
-        <a
-          href={`mailto:${profile.email}`}
-          className="group relative flex h-9 items-center justify-center overflow-hidden rounded-full bg-mist px-5 text-sm font-semibold text-ink transition-all hover:scale-105 active:scale-95"
-        >
-          <span className="relative z-10">Say hello</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
-        </a>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="group relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-mist/10 text-mist transition-all hover:bg-mist/20 hover:scale-105 active:scale-95"
+            aria-label="Toggle theme"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {theme === 'dark' ? (
+                <motion.svg
+                  key="moon"
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </motion.svg>
+              ) : (
+                <motion.svg
+                  key="sun"
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="m4.93 4.93 1.41 1.41" />
+                  <path d="m17.66 17.66 1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                  <path d="m6.34 17.66-1.41 1.41" />
+                  <path d="m19.07 4.93-1.41 1.41" />
+                </motion.svg>
+              )}
+            </AnimatePresence>
+          </button>
+          
+          <a
+            href={`mailto:${profile.email}`}
+            className="group relative flex h-9 items-center justify-center overflow-hidden rounded-full bg-mist px-5 text-sm font-semibold text-ink transition-all hover:scale-105 active:scale-95"
+          >
+            <span className="relative z-10">Say hello</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+          </a>
+        </div>
       </nav>
     </header>
   )

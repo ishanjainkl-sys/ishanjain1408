@@ -108,14 +108,14 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#161c19]/80 px-6 py-16 shadow-[0_0_40px_rgba(126,184,168,0.05)] backdrop-blur-xl md:px-14 md:py-20"
+          className="relative overflow-hidden rounded-[2.5rem] border border-mist/10 bg-ink-soft/80 px-6 py-16 shadow-[0_0_40px_color-mix(in_srgb,var(--color-sage-val)_5%,transparent)] backdrop-blur-xl md:px-14 md:py-20 transition-colors duration-500"
         >
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                'radial-gradient(ellipse 70% 80% at 100% 0%, rgba(126, 184, 168, 0.18), transparent 55%)',
+                'radial-gradient(ellipse 70% 80% at 100% 0%, color-mix(in srgb, var(--color-sage-val) 18%, transparent), transparent 55%)',
             }}
           />
 
@@ -143,12 +143,12 @@ export function Contact() {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/5 text-mist-dim transition-all duration-300 hover:-translate-y-1 hover:border-sage/50 hover:bg-sage/10 hover:text-sage hover:shadow-[0_0_20px_rgba(126,184,168,0.15)]"
+                    className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-mist/10 bg-mist/5 text-mist-dim transition-all duration-300 hover:-translate-y-1 hover:border-sage/50 hover:bg-sage/10 hover:text-sage hover:shadow-[0_0_20px_color-mix(in_srgb,var(--color-sage-val)_15%,transparent)]"
                     aria-label={item.label}
                   >
                     {item.icon}
                     {/* Tooltip */}
-                    <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 scale-95 whitespace-nowrap rounded-lg border border-white/10 bg-ink-lift px-3 py-1.5 text-xs text-mist shadow-xl opacity-0 transition-all duration-200 group-hover:-top-12 group-hover:scale-100 group-hover:opacity-100">
+                    <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 scale-95 whitespace-nowrap rounded-lg border border-mist/10 bg-ink-lift px-3 py-1.5 text-xs text-mist shadow-xl opacity-0 transition-all duration-200 group-hover:-top-12 group-hover:scale-100 group-hover:opacity-100">
                       {item.label}
                     </span>
                   </a>
@@ -206,7 +206,7 @@ export function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.name ? 'border-red-500/50' : 'border-white/10'
+                        className={`w-full rounded-2xl border bg-mist/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-mist/10 ${errors.name ? 'border-red-500/50' : 'border-mist/10'
                           }`}
                         placeholder="John Doe"
                       />
@@ -224,7 +224,7 @@ export function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.email ? 'border-red-500/50' : 'border-white/10'
+                        className={`w-full rounded-2xl border bg-mist/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-mist/10 ${errors.email ? 'border-red-500/50' : 'border-mist/10'
                           }`}
                         placeholder="john@example.com"
                       />
@@ -244,7 +244,7 @@ export function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.phone ? 'border-red-500/50' : 'border-white/10'
+                        className={`w-full rounded-2xl border bg-mist/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-mist/10 ${errors.phone ? 'border-red-500/50' : 'border-mist/10'
                           }`}
                         placeholder="+91-XXXXXXXXXX"
                       />
@@ -262,7 +262,7 @@ export function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         disabled={isSubmitting}
-                        className={`w-full rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.subject ? 'border-red-500/50' : 'border-white/10'
+                        className={`w-full rounded-2xl border bg-mist/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-mist/10 ${errors.subject ? 'border-red-500/50' : 'border-mist/10'
                           }`}
                         placeholder="How can I help you?"
                       />
@@ -281,7 +281,7 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       disabled={isSubmitting}
-                      className={`w-full resize-none rounded-2xl border bg-white/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-white/10 ${errors.message ? 'border-red-500/50' : 'border-white/10'
+                      className={`w-full resize-none rounded-2xl border bg-mist/5 px-5 py-3.5 text-sm text-mist outline-none transition-all focus:border-sage focus:bg-mist/10 ${errors.message ? 'border-red-500/50' : 'border-mist/10'
                         }`}
                       placeholder="Your message here..."
                     />
@@ -291,7 +291,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-mist px-8 py-3.5 text-sm font-semibold text-ink shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100"
+                    className="group relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-mist px-8 py-3.5 text-sm font-semibold text-ink shadow-[0_0_20px_color-mix(in_srgb,var(--color-mist-val)_10%,transparent)] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100"
                   >
                     <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-15"></div>

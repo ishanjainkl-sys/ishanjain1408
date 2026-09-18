@@ -4,22 +4,46 @@
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
 
-  /* Premium Dark Theme (Green/Sage) */
-  --color-ink: #0f1412;
-  --color-ink-soft: #161c19;
-  --color-ink-lift: #1c2420;
+  --color-ink: var(--color-ink-val);
+  --color-ink-soft: var(--color-ink-soft-val);
+  --color-ink-lift: var(--color-ink-lift-val);
   
-  /* High contrast text */
-  --color-mist: #e8efe9;
-  --color-mist-dim: #a8b5ad;
-  --color-mist-faint: #6d7a73;
+  --color-mist: var(--color-mist-val);
+  --color-mist-dim: var(--color-mist-dim-val);
+  --color-mist-faint: var(--color-mist-faint-val);
   
-  /* Original Sage accents */
-  --color-sage: #7eb8a8;
-  --color-sage-deep: #4f8f7f;
+  --color-sage: var(--color-sage-val);
+  --color-sage-deep: var(--color-sage-deep-val);
   
-  /* Very subtle borders */
-  --color-line: rgba(232, 239, 233, 0.12);
+  --color-line: var(--color-line-val);
+}
+
+@layer base {
+  :root {
+    /* Premium Dark Theme (Green/Sage) - Default */
+    --color-ink-val: #0f1412;
+    --color-ink-soft-val: #161c19;
+    --color-ink-lift-val: #1c2420;
+    --color-mist-val: #e8efe9;
+    --color-mist-dim-val: #a8b5ad;
+    --color-mist-faint-val: #6d7a73;
+    --color-sage-val: #7eb8a8;
+    --color-sage-deep-val: #4f8f7f;
+    --color-line-val: rgba(232, 239, 233, 0.12);
+  }
+
+  :root.light {
+    /* Premium Light Theme */
+    --color-ink-val: #f4f7f5;
+    --color-ink-soft-val: #e8eae9;
+    --color-ink-lift-val: #dce0de;
+    --color-mist-val: #121a17;
+    --color-mist-dim-val: #4a5c54;
+    --color-mist-faint-val: #7c8f85;
+    --color-sage-val: #4a8775;
+    --color-sage-deep-val: #2d5c50;
+    --color-line-val: rgba(26, 36, 33, 0.12);
+  }
 }
 
 @layer base {

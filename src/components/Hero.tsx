@@ -25,23 +25,23 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 z-0"
       >
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 transition-colors duration-500"
           style={{
             background: `
-              linear-gradient(180deg, transparent 0%, rgba(15, 20, 18, 0.35) 45%, rgba(15, 20, 18, 0.92) 78%, #0f1412 100%),
-              radial-gradient(ellipse 70% 60% at 70% 35%, rgba(126, 184, 168, 0.22), transparent 55%),
-              radial-gradient(ellipse 50% 40% at 20% 60%, rgba(79, 143, 127, 0.14), transparent 50%)
+              linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--color-ink-val) 35%, transparent) 45%, color-mix(in srgb, var(--color-ink-val) 92%, transparent) 78%, var(--color-ink-val) 100%),
+              radial-gradient(ellipse 70% 60% at 70% 35%, color-mix(in srgb, var(--color-sage-val) 22%, transparent), transparent 55%),
+              radial-gradient(ellipse 50% 40% at 20% 60%, color-mix(in srgb, var(--color-sage-deep-val) 14%, transparent), transparent 50%)
             `,
           }}
         />
         <div className="absolute inset-0 opacity-[0.18]">
-          <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+          <svg className="h-full w-full text-mist/35 transition-colors duration-500" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
                 <path
                   d="M 64 0 L 0 0 0 64"
                   fill="none"
-                  stroke="rgba(232,239,233,0.35)"
+                  stroke="currentColor"
                   strokeWidth="0.5"
                 />
               </pattern>
@@ -107,7 +107,7 @@ export function Hero() {
           >
             <a
               href="#work"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-mist px-8 py-3.5 text-sm font-semibold text-ink shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all hover:scale-105 active:scale-95"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-mist px-8 py-3.5 text-sm font-semibold text-ink shadow-[0_0_20px_color-mix(in_srgb,var(--color-mist-val)_10%,transparent)] transition-all hover:scale-105 active:scale-95"
             >
               <span className="relative z-10">View Projects</span>
               <div className="absolute inset-0 bg-gradient-to-r from-sage to-sage-deep opacity-0 transition-opacity duration-300 group-hover:opacity-15"></div>
@@ -116,7 +116,7 @@ export function Hero() {
               href="/resume/Ishan Jain's Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-medium text-mist backdrop-blur-sm transition-all hover:border-sage/50 hover:bg-white/10 hover:text-sage hover:shadow-[0_0_20px_rgba(126,184,168,0.15)] active:scale-95"
+              className="group inline-flex items-center justify-center rounded-full border border-mist/10 bg-mist/5 px-8 py-3.5 text-sm font-medium text-mist backdrop-blur-sm transition-all hover:border-sage/50 hover:bg-mist/10 hover:text-sage hover:shadow-[0_0_20px_color-mix(in_srgb,var(--color-sage-val)_15%,transparent)] active:scale-95"
             >
               Download Resume
             </a>
@@ -130,7 +130,7 @@ export function Hero() {
           animate="show"
           className="relative md:mr-8 lg:mr-16 shrink-0"
         >
-          <div className="relative h-40 w-32 md:h-64 md:w-48 lg:h-72 lg:w-56 overflow-hidden rounded-[2rem] border border-sage/20 bg-ink/50 shadow-[0_0_40px_rgba(126,184,168,0.15)] ring-1 ring-white/5 md:rounded-[2.5rem]">
+          <div className="relative h-40 w-32 md:h-64 md:w-48 lg:h-72 lg:w-56 overflow-hidden rounded-[2rem] border border-sage/20 bg-ink/50 shadow-[0_0_40px_color-mix(in_srgb,var(--color-sage-val)_15%,transparent)] ring-1 ring-mist/5 md:rounded-[2.5rem] transition-colors duration-500">
             <img
               src={heroImg}
               alt="Ishan Jain profile photo"
@@ -138,7 +138,7 @@ export function Hero() {
               loading="eager"
               decoding="async"
             />
-            <div className="absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-inset ring-white/10 pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-inset ring-mist/10 pointer-events-none transition-colors duration-500"></div>
           </div>
         </motion.div>
       </div>
