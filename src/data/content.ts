@@ -71,6 +71,12 @@ export const projects: Project[] = [
       { label: 'Link', href: 'https://walkintown-ajt8irtl8-kl24.vercel.app/' },
     ],
     image: '/projects/walkintown.png.png',
+    images: [
+      '/projects/WalkInTown1.png',
+      '/projects/WalkInTown2.png',
+      '/projects/WalkInTown3.png',
+      '/projects/WalkInTown4.png',
+    ],
   },
   {
     id: 'chatmaster',
