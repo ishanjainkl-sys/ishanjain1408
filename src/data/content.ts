@@ -219,9 +219,11 @@ export const experience = [
     role: 'Full Stack Engineer',
     period: 'Sep 2026 — Present',
     impact: [
-      'Built a visual AI-powered website builder with responsive Desktop/Tablet/Mobile editing, drag-and-drop interactions, and Figma-like zoom/pan.',
-      'Developed scalable editor architecture using Next.js, React, Node.js, PostgreSQL, Prisma ORM, and Turborepo.',
-      'Improved the product experience through responsive canvas behavior, smooth interactions, and reusable UI components.'
+      'Built a Figma-inspired visual website builder with responsive Desktop, Tablet, and Mobile editing.',
+      'Developed drag-and-drop interactions, canvas zoom/pan, reusable components, and property editing.',
+      'Implemented AI-assisted website generation and editing workflows.',
+      'Designed responsive editing architecture to maintain consistent component positioning across viewport sizes.',
+      'Improved the editor experience with project/template management and live previews.CLS',
     ],
   },
   {
