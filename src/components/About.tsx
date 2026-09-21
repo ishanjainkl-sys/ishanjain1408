@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { education, profile } from '../data/content'
+import { education, profile, volunteering } from '../data/content'
 
 export function About() {
   return (
@@ -32,9 +32,10 @@ export function About() {
             className="group rounded-3xl border border-white/5 bg-white/[0.02] p-8 transition-all hover:bg-white/[0.04] md:p-10"
           >
             <div className="space-y-6 text-base leading-relaxed text-mist-dim md:text-lg">
-              <p>
-                {profile.summary}
-              </p>
+              {/* @ts-ignore */}
+              {profile.summary.map((paragraph: string, i: number) => (
+                <p key={i}>{paragraph}</p>
+              ))}
             </div>
             <p className="mt-8 text-sm text-mist-faint">
               Languages: English & Hindi
@@ -65,10 +66,53 @@ export function About() {
                   <p className="mt-2 text-mist-dim text-base">
                     {edu.school}
                   </p>
-                  <div className="mt-2 flex items-center gap-3 text-sm text-mist-faint">
+                  <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-mist-faint">
                     <span className="rounded-full bg-white/5 px-3 py-1">{edu.period}</span>
                     <span>{edu.detail}</span>
                   </div>
+                  {/* @ts-ignore */}
+                  {edu.bullets && edu.bullets.length > 0 && (
+                    <ul className="mt-4 list-inside list-disc space-y-1 text-sm text-mist-dim marker:text-mist-faint">
+                      {/* @ts-ignore */}
+                      {edu.bullets.map((bullet: string, i: number) => (
+                        <li key={i}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <p className="mb-8 mt-12 text-sm tracking-[0.12em] text-sage uppercase">
+              Volunteering
+            </p>
+            <div className="space-y-8">
+              {volunteering.map((vol, idx) => (
+                <div key={idx} className="relative pl-6">
+                  <div className="absolute left-0 top-2 h-1.5 w-1.5 rounded-full bg-mist-faint group-hover:bg-sage transition-colors"></div>
+                  <div className="absolute left-[3px] top-4 -bottom-6 w-px bg-white/5 last:hidden"></div>
+                  <p
+                    className="font-display text-xl text-mist"
+                    style={{ fontWeight: 600 }}
+                  >
+                    {vol.role}
+                  </p>
+                  <p className="mt-2 text-mist-dim text-base">
+                    {vol.organization}
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-mist-faint">
+                    <span className="rounded-full bg-white/5 px-3 py-1">{vol.period}</span>
+                    <span>{vol.detail}</span>
+                  </div>
+                  {/* @ts-ignore */}
+                  {vol.bullets && vol.bullets.length > 0 && (
+                    <ul className="mt-4 list-inside list-disc space-y-1 text-sm text-mist-dim marker:text-mist-faint">
+                      {/* @ts-ignore */}
+                      {vol.bullets.map((bullet: string, i: number) => (
+                        <li key={i}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>

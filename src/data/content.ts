@@ -20,8 +20,12 @@ export const profile = {
   email: 'ishanjain1408@gmail.com',
   phone: '+91 7728919575',
   headline: 'Building scalable web, desktop, backend, and AI-powered applications.',
-  summary:
-    'Full Stack Developer with 2+ years of experience building scalable web, desktop, backend, and AI-powered applications. I specialize in React.js, Next.js, Node.js, Express.js, TypeScript, Python, FastAPI, MongoDB, PostgreSQL, MySQL, REST APIs, and AI/RAG applications.',
+  summary: [
+    'I’m a Full-Stack Developer with 2+ years of experience building scalable, reliable, and user-focused web and desktop applications. My experience spans frontend and backend development, REST APIs, database design, performance optimization, production troubleshooting, and collaborative Agile development.',
+    'At Kadel Labs, I worked on React.js and Electron-based applications for file management, playback, monitoring, and 360° viewing. I resolved 25+ UI, performance, and functionality defects, developed reusable components, integrated REST APIs, and collaborated on testing and code reviews.',
+    'Previously, at Acolyte Technologies, I developed a MERN-based Sales Lead Dashboard supporting 200+ leads and 100+ daily logins. I improved backend architecture and middleware, helping reduce application crashes by 27% and improve performance by 25%. At In Time Tec, I worked on React, Redux, TypeScript, and React Native applications, improving UI responsiveness, scalability, and application performance.',
+    'I’m also passionate about AI-powered application development and enjoy exploring how AI can enhance modern software products. I have built an AI-powered website builder using Google GenAI and a RAG-based document assistant using FastAPI, FAISS, and Mistral AI, featuring document retrieval and source citations.',
+  ],
   links: {
     linkedin: 'https://www.linkedin.com/in/ishanjain1408',
     github: 'https://github.com/ishanjain1408',
@@ -280,15 +284,37 @@ export const experience = [
 export const education = [
   {
     school: 'Poornima College of Engineering',
-    degree: 'B.Tech, Computer Science & Engineering',
+    degree: 'Bachelor of Technology - B.Tech, Computer Engineering',
     period: 'Aug 2019 — Jul 2023',
-    detail: '7.38 CGPA',
+    detail: 'Grade: A',
+    bullets: ['Vice Caption - Red Club'],
   },
   {
     school: 'Kalpavriksha Program',
     degree: 'DSA, OS, Flutter, and Python',
     period: 'Mar 2023 — Jul 2024',
     detail: '2 real-world engineering projects, A+ Grade',
+  },
+  {
+    school: 'Kendriya Vidyalaya',
+    degree: '10th (87.40%) & 12th PCM (85.40%), CBSE',
+    period: '2006 — 2019',
+    detail: 'Grade: A',
+    bullets: [
+      'School Caption @ K.V. Dungarpur',
+      'Pre-rastrapati awarded scout (2018) | The Bharat scouts & guides',
+      'Merit Certificate in Informatics Practices (IP) from CBSE (2019)',
+    ],
+  },
+]
+
+export const volunteering = [
+  {
+    organization: 'The Bharat Scouts and Guides',
+    role: 'Scouting',
+    period: 'May 2013 — Apr 2019',
+    detail: 'Social Services',
+    bullets: ['Pre-Rastrapati Awarded Scout ( NYC Gadpuri, Haryana ) - 2018'],
   },
 ]
 

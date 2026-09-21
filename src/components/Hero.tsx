@@ -74,7 +74,7 @@ export function Hero() {
             className="mb-5 flex flex-col gap-1.5 text-sm font-medium tracking-[0.18em] text-sage uppercase"
           >
             <div className="flex flex-wrap items-center gap-2 md:gap-3">
-              <span>Full-Stack Software Engineer</span>
+              <span>Full-Stack Developer</span>
               <span className="hidden h-1 w-1 rounded-full bg-sage/50 md:block"></span>
               <span>MERN STACK</span>
               <span className="hidden h-1 w-1 rounded-full bg-sage/50 md:block"></span>
