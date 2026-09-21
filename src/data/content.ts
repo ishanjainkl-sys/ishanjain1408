@@ -320,6 +320,7 @@ export const volunteering = [
 ]
 
 export const achievements = [
+  
   {
     title: 'Technovation 2021 — 2nd Place',
     period: 'Jan 2022',
@@ -330,33 +331,49 @@ export const achievements = [
     period: 'Jul 2021',
     detail: 'Completed 3 milestones — 12 skill badges and 24 Qwiklabs quests.',
   },
+  {
+    title: 'Merit Certificate in Informatics Practices (IP)',
+    period: '2019',
+    detail: 'Got Merit Certificate from CBSE in 12th Board Examination.',
+  },
 ]
 
 export const skills = {
   Languages: ['JavaScript (ES6+)', 'TypeScript', 'C++', 'Python', 'SQL'],
-  Frontend: [
+  'Frontend Development': [
     'React.js',
     'React Native',
     'Next.js',
     'Redux',
+    'Zustand',
     'HTML5',
     'CSS3',
     'Tailwind CSS',
     'Material UI',
   ],
-  Backend: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs'],
-  Database: ['MongoDB', 'MySQL', 'PostgreSQL'],
-  Tools: [
+  'Backend Development': [
+    'Node.js',
+    'Express.js',
+    'FastAPI',
+    'REST APIs',
+    'JWT Authentication',
+  ],
+  Databases: ['MongoDB', 'MySQL', 'PostgreSQL', 'Prisma ORM'],
+  'Cloud & DevOps': [
+    'Vercel',
+    'Render',
     'Git',
     'GitHub',
-    'Electron',
-    'Prisma',
-    'JWT',
+    'CI/CD Pipelines',
     'Postman',
+    'Agile/Scrum',
+  ],
+  'AI & Tools': [
+    'Electron',
     'FAISS',
     'Hugging Face',
     'Mistral AI',
-    'Vercel',
-    'Render',
+    'Google GenAI',
+    'Turborepo',
   ],
 }
