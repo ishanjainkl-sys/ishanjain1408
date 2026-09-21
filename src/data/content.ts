@@ -283,18 +283,19 @@ export const experience = [
 
 export const education = [
   {
+    school: 'Kalpavriksha Program',
+    degree: 'DSA, OS, Flutter, and Python',
+    period: 'Mar 2023 — Jul 2024',
+    detail: '2 real-world engineering projects, A+ Grade',
+  },
+  {
     school: 'Poornima College of Engineering',
     degree: 'Bachelor of Technology - B.Tech, Computer Engineering',
     period: 'Aug 2019 — Jul 2023',
     detail: 'Grade: A',
     bullets: ['Vice Caption - Red Club'],
   },
-  {
-    school: 'Kalpavriksha Program',
-    degree: 'DSA, OS, Flutter, and Python',
-    period: 'Mar 2023 — Jul 2024',
-    detail: '2 real-world engineering projects, A+ Grade',
-  },
+
   {
     school: 'Kendriya Vidyalaya',
     degree: '10th (87.40%) & 12th PCM (85.40%), CBSE',
