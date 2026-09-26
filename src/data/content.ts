@@ -224,19 +224,6 @@ export const earlierWork: Project[] = [
 
 export const experience = [
   {
-    company: 'Freelance',
-    location: 'Remote',
-    role: 'Full Stack Engineer',
-    period: 'Sep 2026 — Present',
-    impact: [
-      'Built a Figma-inspired visual website builder with responsive Desktop, Tablet, and Mobile editing.',
-      'Developed drag-and-drop interactions, canvas zoom/pan, reusable components, and property editing.',
-      'Implemented AI-assisted website generation and editing workflows.',
-      'Designed responsive editing architecture to maintain consistent component positioning across viewport sizes.',
-      'Improved the editor experience with project/template management and live previews.CLS',
-    ],
-  },
-  {
     company: 'Kadel Labs',
     location: 'Udaipur',
     role: 'Trainee Software Engineer',
