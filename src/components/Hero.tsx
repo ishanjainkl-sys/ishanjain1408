@@ -81,8 +81,8 @@ export function Hero() {
               <span>AI</span>
             </div>
             <div className="mt-1 flex flex-wrap items-center gap-2 text-[0.85em] text-mist-dim md:gap-3">
-              <span className="rounded-full border border-sage/30 bg-sage/10 px-2.5 py-0.5 text-sage">IMMEDIATE JOINER</span>
-              <span className="hidden h-1 w-1 rounded-full bg-mist-dim/50 md:block"></span>
+              {/* <span className="rounded-full border border-sage/30 bg-sage/10 px-2.5 py-0.5 text-sage">IMMEDIATE JOINER</span> */}
+              {/* <span className="hidden h-1 w-1 rounded-full bg-mist-dim/50 md:block"></span> */}
               <span>{profile.location.toUpperCase()}</span>
             </div>
           </motion.div>
